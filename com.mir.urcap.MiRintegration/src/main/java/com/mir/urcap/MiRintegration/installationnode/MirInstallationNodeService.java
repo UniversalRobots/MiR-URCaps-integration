@@ -6,6 +6,7 @@ import com.mir.urcap.MiRintegration.common.MirDaemonService;
 import com.mir.urcap.MiRintegration.style.Style;
 import com.mir.urcap.MiRintegration.style.V3Style;
 import com.mir.urcap.MiRintegration.style.V5Style;
+import com.mir.urcap.MiRintegration.urcontrol.URControlConfig;
 import com.ur.urcap.api.contribution.InstallationNodeService;
 import com.ur.urcap.api.contribution.ViewAPIProvider;
 import com.ur.urcap.api.contribution.installation.ContributionConfiguration;
@@ -21,6 +22,7 @@ public class MirInstallationNodeService implements SwingInstallationNodeService<
 	
 	public MirInstallationNodeService(MirDaemonService daemonService) {
 		this.daemonService = daemonService;
+		URControlConfig.setPowerSupplyLimit(480);
 	}
 	
 	@Override
